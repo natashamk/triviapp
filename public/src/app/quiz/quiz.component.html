@@ -1,0 +1,15 @@
+<div class="background">
+  <div class="container">
+  <form #formdata="ngForm" (ngSubmit)="onSubmit(formdata.value)">
+      <h2>{{ questions[0]['question'] }}</h2><br>
+      <p *ngFor="let option of questions[0]['options']">
+      <input 
+        type='radio' 
+        name="ans_selected" 
+        value={{option}} ngModel>&nbsp;&nbsp;{{option}} </p>
+      <input type="submit" value="Submit" class="btn btn-primary"><br>
+      <button (click)="resultRoute()" class="btn btn-link big">Go to results</button>        
+  </form>
+  </div>
+</div>
+

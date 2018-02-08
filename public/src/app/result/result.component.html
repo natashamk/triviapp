@@ -1,0 +1,9 @@
+<div class="background">
+  <div class="container">
+    <button (click)="navtoHome()" class="btn btn-danger">Logout</button>          
+    <h2 *ngIf="score > 7">Excellent! Congratulations you scored {{score}}/10!</h2>
+    <h2 *ngIf="score < 8 && score > 5">Great, Congratulations you scored {{score}}/10!</h2>
+    <h2 *ngIf="score < 6">You scored {{score}}/10, let's play again!</h2><br>
+    <button (click)="navtoQuiz()" class="btn btn-primary">Play again</button>
+  </div>
+</div>
